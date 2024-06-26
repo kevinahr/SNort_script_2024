@@ -63,5 +63,3 @@ def main():
 
 if __name__ == "__main__":
   main()
-# Snort rule attempting to detect DDos anomaly. This rule will generate an alert if there are more than 100 TCP connections attempts to any port on the home network within 5 seconds, which could indicate a DDoS attack. The flags:S option is looking for SYN packets, which are the initial packets in a TCP handshake, commonly used in such attacks.
-alert tcp any any -> $HOME_NET any (msg:"Potential DDoS Attack Detected"; flags:S; threshold:type threshold, track by_dst, count 100, seconds 5; classtype:attempted-dos; sid:2000001; rev:1;)
