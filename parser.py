@@ -1,6 +1,6 @@
 """
 This script declare a parse_pcap function that taking in a pcap file and
-parse the following TCP/UDP/ICMP/IP/DNS/payload into a dictionary
+parse the following TCP/UDP/ICMP/IP/DNS/payload into a dictionary and save into a CVS file
 """
 from scapy.all import *
 
@@ -38,5 +38,10 @@ def parse(x):
             parse_data['dns_query_type'] = packet['DNS'].qd
             parse_data['dns_response'] = packet['DNS'].ns
 
+        with open('pcap.cvs', 'a+') as f:
+            f.write(f"{parse_data}\n")
         print(parse_data)
-        
+
+
+
+parse(packets)
