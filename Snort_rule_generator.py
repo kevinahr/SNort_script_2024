@@ -27,7 +27,7 @@ def main(pcap_file, anomalies):
 
 if __name__ == "__main__":
     pcap_file = 'path_to_your_pcap_file.pcap'
-    # Example anomalies, replace with actual detected anomalies
+    #FIX TO ADD FILES with ANANMOLIES
     anomalies = [
         {'ip': '192.168.1.1', 'type': 'High traffic'},
         {'ip': '10.0.0.1', 'type': 'Suspicious TCP SYN'}
