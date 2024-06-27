@@ -42,6 +42,8 @@ def main():
     output_file = input("Enter the output pcap file name: ").strip()
 
     # Run packet capture script with provided arguments
+    print("Running packet capture...")
+    
     result = run_script("packetcapture.py", interface, duration, output_file)
     if result.returncode != 0:
       print("Failed to run packetcapture.py")
@@ -53,11 +55,11 @@ def main():
     return
 
 
-  # Run parser.py with the pcap file as an argument
+  # Run rule-gen.py with the pcap file as an argument
   print(f"Processing pcap file: {pcap_file}")
-  result = run_script("parser.py", pcap_file)
+  result = run_script("rule-gen.py", pcap_file)
   if result.returncode != 0:
-    print("Failed to run process_pcap.py")
+    print("Failed to run rule-gen.py")
     return
   
 
