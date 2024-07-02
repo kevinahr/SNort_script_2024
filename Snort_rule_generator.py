@@ -27,7 +27,7 @@ def main(pcap_file, anomalies):
 
 if __name__ == "__main__":
     pcap_file = 'path_to_your_pcap_file.pcap'
-    #FIX TO ADD FILES with ANANMOLIES
+    #Create a file to store ips and type of anomalie blocked and what snort rule was implemented
     anomalies = [
         {'ip': '192.168.1.1', 'type': 'High traffic'},
         {'ip': '10.0.0.1', 'type': 'Suspicious TCP SYN'}
