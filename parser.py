@@ -38,7 +38,7 @@ def parse(x):
             parse_data['dns_query_type'] = packet['DNS'].qd
             parse_data['dns_response'] = packet['DNS'].ns
 
-        with open('pcap.cvs', 'a+') as f:
+        with open('pcap.csv', 'a+') as f:
             f.write(f"{parse_data}\n")
         print(parse_data)
 
