@@ -31,10 +31,11 @@ If you don't have an existing pcap file and want to capture new network traffic:
 
 ```bash
 python packetcapture.py <interface> <duration> <output_file>
+```
 <interface>: Network interface name (e.g., eth0, wlan0).
 <duration>: Duration in seconds to capture traffic.
 <output_file>: Name of the output pcap file to save captured packets.
-```
+
 
 ### Detect Anomalies and Generate Snort Rules
 
@@ -42,8 +43,9 @@ python packetcapture.py <interface> <duration> <output_file>
 
 ```bash
 python SnortRules.py <pcap_file>
-<pcap_file>: Path to the pcap file to analyze.
 ```
+<pcap_file>: Path to the pcap file to analyze.
+
 
 ### Customize and Extend
 
