@@ -22,6 +22,7 @@ Install the required Python libraries using `pip` and the provided `requirements
 
 ```bash
 pip install -r requirements.txt
+```
 
 ### Usage
 Capture Network Traffic (optional)
@@ -29,20 +30,22 @@ Capture Network Traffic (optional)
 If you don't have an existing pcap file and want to capture new network traffic:
 
 ```bash
-Copy code
 python packetcapture.py <interface> <duration> <output_file>
 <interface>: Network interface name (e.g., eth0, wlan0).
 <duration>: Duration in seconds to capture traffic.
 <output_file>: Name of the output pcap file to save captured packets.
-Detect Anomalies and Generate Snort Rules
+```
+
+### Detect Anomalies and Generate Snort Rules
 
 ### Analyze a pcap file and generate Snort rules using SnortRules.py:
 
 ```bash
-Copy code
 python SnortRules.py <pcap_file>
 <pcap_file>: Path to the pcap file to analyze.
-Customize and Extend
+```
+
+### Customize and Extend
 
 Adjust thresholds and specific detection criteria in SnortRules.py and rule-gen.py as needed.
 Modify generated Snort rules (generate_snort_rules() function in SnortRules.py) to fit your network security requirements.
