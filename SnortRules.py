@@ -55,11 +55,11 @@ def main():
     return
 
 
-  # Run rule-gen.py with the pcap file as an argument
+  # Run detect_anomalies.py with the pcap file as an argument
   print(f"Processing pcap file: {pcap_file}")
-  result = run_script("rule-gen.py", pcap_file)
+  result = run_script("detect_anomalies.py", pcap_file)
   if result.returncode != 0:
-    print("Failed to run rule-gen.py")
+    print("Failed to run detect_anomalies.py")
     return
   
 
