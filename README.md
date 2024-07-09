@@ -10,7 +10,7 @@ This set of Python scripts allows for the analysis of network traffic captured i
 
 2. **SnortRules.py**: Analyzes a pcap file and generates Snort rules for potential network anomalies such as suspicious IP activity, unusual port usage, potential DNS tunneling, and port scans.
 
-3. **rule-gen.py**: Processes a pcap file to generate Snort rules for detecting specific network behaviors and patterns.
+3. **detect_anomalies.py**: Processes a pcap file to generate Snort rules for detecting specific network behaviors and patterns.
 
 ## Installation
 
@@ -49,5 +49,5 @@ python SnortRules.py <pcap_file>
 
 ### Customize and Extend
 
-Adjust thresholds and specific detection criteria in SnortRules.py and rule-gen.py as needed.
+Adjust thresholds and specific detection criteria in SnortRules.py and detect_anomalies.py as needed.
 Modify generated Snort rules (generate_snort_rules() function in SnortRules.py) to fit your network security requirements.
